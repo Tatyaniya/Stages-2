@@ -67,13 +67,13 @@ body, h3, p {
 .stages2__content {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 122px;
+    margin-bottom: 114px;
 }
 
 .stages2__item {
     width: 208px;
-    padding-top: 73px;
-    padding-bottom: 43px;
+    padding-top: 50px;
+    padding-bottom: 18px;
     position: relative;
 }
 
@@ -106,8 +106,8 @@ body, h3, p {
 }
 
 .stages2__item:nth-child(2n) {
-    padding-top: 43px;
-    padding-bottom: 46px;
+    padding-top: 20px;
+    padding-bottom: 27px;
 }
 
 .stages2__item:nth-child(2n):before  {
@@ -132,6 +132,10 @@ body, h3, p {
 
 .stages2__item:nth-child(2n) .stages2__num {
     top: 90%;
+}
+
+.stages2__item:last-child .stages2__num {
+    left: -14px;
 }
 
 .stages2__info {
@@ -239,114 +243,92 @@ body, h3, p {
     text-align: center;
 }
 
-@media screen and ( max-width: 1255px ) {
+/*************************  media  **************************/
+
+@media screen and ( max-width: 1256px ) {
     .stages2__container {
-        max-width: 855px;
+        max-width: 764px;
     }
-    .stages2__item:nth-child(2) {
+    .stages2__item:nth-child(n+6):nth-child(even) {
         order: 2;
-        margin-bottom: 120px;
+        padding-bottom: 17px;
+        margin-top: 130px;
     }
-    .stages2__item:nth-child(4) {
+    .stages2__item:nth-child(n+7):nth-child(odd) {
         order: 3;
-        margin-left: 93px;
-    }
-    .stages2__item:nth-child(5) {
-        order: 5;
-        padding-top: 43px;
-        margin-left: 276px;
+        padding-top: 21px;
+        padding-bottom: 8px;
     }
     .stages2__item:nth-child(6) {
-        order: 4;
+        margin-left: 52px;
     }
-    .stages2__item:nth-child(4) .stages2__decor,
-    .stages2__item:nth-child(6) .stages2__decor {
+    .stages2__item:nth-child(7) {
+        margin-left: 156px;
+    }
+    .stages2__item:nth-child(n+6):nth-child(even) .stages2__decor {
         top: 100%;
     }
-    .stages2__item:nth-child(4) .stages2__num,
-    .stages2__item:nth-child(6) .stages2__num {
-        top: -18px;
-    }
-    .stages2__item:nth-child(5) .stages2__decor {
+    .stages2__item:nth-child(n+7):nth-child(odd) .stages2__decor {
         top: 0;
     }
-    .stages2__item:nth-child(5) .stages2__num {
-        top: 90%;
+    .stages2__item:nth-child(n+6):nth-child(even) .stages2__num {
+        top: -45px;
+        left: -13px;
     }
-    .stages2__item:nth-child(5):before {
-        top: 21px;
-        height: 90%;
+    .stages2__item:nth-child(n+7):nth-child(odd) .stages2__num {
+        top: 100%;
     }
-    .stages2__item:nth-child(4):before,
-    .stages2__item:nth-child(6):before {
-        top: 35px;
+    .stages2__item:nth-child(n+6):nth-child(even):before {
+        top: 19px;
+        height: 99%;
+    }
+    .stages2__item:nth-child(n+7):nth-child(odd):before {
+        height: 100%;
+        top: 20px;
     }
     .stages2__prompt {
         padding-left: 15px;
         padding-right: 15px;
     }
-    /*.stages2__item:nth-child(3) .stages2__decor {
-        width: 185px;
-    }
-    .stages2__item:nth-child(3) .stages2__decor:after {
-        border: 0;
-    }*/
 }
 
-@media screen and ( max-width: 855px ) {
-    .stages2__container {
-        max-width: 490px;
-    }
-    .stages2__content {
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
-    .stages2__content .stages2__item {
-        order: 0;
-        padding-top: 73px;
-        padding-bottom: 43px;
-        margin-left: 93px;
-        margin-bottom: 80px;
-    }
-    .stages2__content .stages2__item .stages2__decor {
-        top: 100%;
-    }
-    .stages2__content .stages2__item .stages2__num {
-        top: -18px;
-    }
-    .stages2__content .stages2__item:before {
-        top: 48px;
-        height: 88%;
-    }
-}
-
-@media screen and ( max-width: 490px ) {
+@media screen and ( max-width: 764px ) {
     .stages2__container {
         max-width: 320px;
     }
     .stages2__title {
         font-size: 30px;
     }
-    .stages2__num {
+    .stages2__content {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .stages2__content .stages2__item,
+    .stages2__item:nth-child(n+6):nth-child(even),
+    .stages2__item:nth-child(n+7):nth-child(odd) {
+        width: 238px;
+        order: 0;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        margin-left: 52px;
+        margin-top: 0;
+        margin-bottom: 80px;
+    }
+    .stages2__item .stages2__num,
+    .stages2__item:nth-child(n+6):nth-child(even) .stages2__num,
+    .stages2__item:nth-child(n+7):nth-child(odd) .stages2__num {
         font-size: 80px;
+        top: -18px;
     }
-    .stages2__content .stages2__item {
-        width: 230px;
-        padding-top: 49px;
-        padding-bottom: 37px;
-        margin-left: 60px;
+    .stages2__content .stages2__item .stages2__decor,
+    .stages2__item:nth-child(n+7):nth-child(odd) .stages2__decor {
+        top: 100%;
     }
-    .stages2__content .stages2__item .stages2__decor {
-        width: 120px;
-        left: -68px;
-    }
-    .stages2__content .stages2__item:last-child .stages2__decor {
-        width: 135px;
-    }
-    .stages2__item .stages2__decor .stages2__round {
-        margin-left: 55px;  
+    .stages2__content .stages2__item .stages2__num {
+        top: -18px;
     }
     .stages2__content .stages2__item:before {
         top: 40px;
+        height: 88%;
     }
 }
